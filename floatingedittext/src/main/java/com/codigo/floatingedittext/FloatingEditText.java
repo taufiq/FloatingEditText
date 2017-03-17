@@ -36,6 +36,7 @@ public class FloatingEditText extends LinearLayout {
      **/
     public EditText et_mainTextEdit;
     public TextView tv_floatingHint;
+    public LinearLayout ll_background;
 
 
     public float mEditTextSize, mFloatingHintSize;
@@ -129,6 +130,7 @@ public class FloatingEditText extends LinearLayout {
 
         et_mainTextEdit = (EditText) findViewById(R.id.EDIT_TEXT);
         tv_floatingHint = (TextView) findViewById(R.id.FLOATING_HINT);
+        ll_background = (LinearLayout) findViewById(R.id.ll_background);
 
 
         if (mIsPassword) et_mainTextEdit.setTransformationMethod(new AsterisksPasswordTransformationMethod());
@@ -137,19 +139,23 @@ public class FloatingEditText extends LinearLayout {
         tv_floatingHint.setTextColor(mFloatingHintColor);
         et_mainTextEdit.setTextColor(mEditTextColor);
         et_mainTextEdit.setHintTextColor(mEditTextHintColor);
-        et_mainTextEdit.setBackgroundResource(mEditTextDrawable);
+        if(mEditTextDrawable != 0)ll_background.setBackgroundResource(mEditTextDrawable);
+
+
         setFloatingHintFont(mFloatingHintFont);
         setEditTextFont(mEditTextFont);
 
-        et_mainTextEdit.setHint(mEditTextHint);
+
+        if(mEditTextHint != null){
+            et_mainTextEdit.setHint(mEditTextHint);
+        }else{
+            et_mainTextEdit.setHint("Hint");
+        }
 
         resetHint();
 
         tv_floatingHint.setVisibility(INVISIBLE);
 
-//        tv_floatingHint.measure(0, 0);
-//        RelativeLayout.LayoutParams params = (RelativeLayout.LayoutParams) et_mainTextEdit.getLayoutParams();
-//        params.setMargins(0, tv_floatingHint.getMeasuredHeight(), 0, 0);
 
         if(!mCondenseHint) {
             et_mainTextEdit.setOnFocusChangeListener(new OnFocusChangeListener() {
