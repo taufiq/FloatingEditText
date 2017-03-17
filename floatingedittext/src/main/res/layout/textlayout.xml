@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    >
+
+   <TextView
+        android:text="TextView"
+        android:maxLines="1"
+        android:scrollbars="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/FLOATING_HINT" />
+
+    <EditText
+        android:id="@+id/EDIT_TEXT"
+        android:textColorHint="@android:color/black"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:clickable="true"
+        android:imeOptions="actionNext"
+        android:singleLine="true"
+        android:textCursorDrawable="@null"
+        />
+
+</LinearLayout>

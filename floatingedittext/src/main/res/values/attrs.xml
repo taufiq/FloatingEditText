@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="FloatingTextLayout">
+        <attr name="editTextHint" format="string"/>
+        <attr name="editTextSize" format="float"/>
+        <attr name="floatingHintSize" format="float"/>
+        <attr name="floatingHintAllCaps" format="boolean"/>
+        <attr name="floatingHintColor" format="color"/>
+        <attr name="editTextHasBackground" format="boolean"/>
+        <attr name="editTextBackgroundDrawable" format="integer"/>
+        <attr name="editTextTextColor" format="color"/>
+        <attr name="editTextHintColor" format="color"/>
+        <attr name="editTextFont" format="string" />
+        <attr name="floatingHintFont" format="string" />
+        <attr name="isPassword" format="boolean"/>
+        <attr name="isCondenseHint" format="boolean"/>
+        <attr name="floatingHintText" format="string" />
+    </declare-styleable>
+
+
+</resources>
