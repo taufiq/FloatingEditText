@@ -18,7 +18,7 @@ Add into dependencies:
 
 ```
 dependencies {
-	        compile 'com.github.taufiqmmhd:FloatingEditText:0.1.0'
+	        compile 'com.github.taufiqmmhd:FloatingEditText:0.1.5'
 	}
 ```
 
